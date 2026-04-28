@@ -8,7 +8,7 @@
 
 The overall framework of ```DLPromoter-SF``` is shown in the following figure.
 
-![BERTGIN-EC Model Architecture](https://github.com/huajiqing23/BERTGIN-EC/blob/main/Model%20Architecture.png)
+![DLPromoter-SF Model Architecture](https://github.com/wuwuwu12310/DLPromoter-SF/blob/main/Model_Architecture_.png)
 
 
 ## Description
