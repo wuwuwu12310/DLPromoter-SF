@@ -52,7 +52,7 @@ We define the multimodal model for the **DLPromoter-SF** method in the file `mod
 The model can be trained using the file `train.py`.
 
 ### Model testing
-Run `test.py` using the new .pth and new .pth model weights:run_config.json, and extra_norm.json obtained from the `train.py` output.
+- Run `test.py` using the new .pth and new .pth model weights:run_config.json, and extra_norm.json obtained from the `train.py` output.
 
 
 ```
