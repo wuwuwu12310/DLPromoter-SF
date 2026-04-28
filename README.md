@@ -44,27 +44,15 @@ scipy:  1.9.3
 The dataset of a large-scale dataset comprising 162,982 80-bp Saccharomyces cerevisiae promoter sequences and their respective strength is available [here](https://github.com/RK2627/PromoDGDE/tree/main/Data/SC).
 The dataset of a small-scale dataset comprising 63,468 80-bp Saccharomyces cerevisiae promoter sequences and their respective strength is available [here](https://github.com/1edv/evolution/blob/master/manuscript_code/model/reproduce_test_data_performance).
 
-### Data Processing
-Raw data preprocessing can be performed using the `preprocess.py` script, including:
-- Extraction of EC numbers as label information;
-- Conversion of reaction SMILES sequences to molecular graphs;
-- Random five-fold cross-validation splitting of the dataset;
-- Further formatting of the data to be directly loadable by the model.
 
 ### Model Training
-We define the multimodal model for the **BERTGIN-EC** method in the file `multimodal_model.py`, where:
-- The sequence feature extraction module is implemented based on the pre-trained model ChemBERTa.
-- The graph feature extraction module is implemented based on the Graph Isomorphism Network (GIN).
+We define the multimodal model for the **DLPromoter-SF** method in the file `model.py`, where:
+- The sequence feature extraction module is implemented based on the multi-scale Convolutional Neural Network (CNN) integrated with Squeeze-and-Excitation (SE) attention mechanisms and Transformer encoders with Squeeze-and-Excitation (SE) attention mechanisms.
+- The statistical feature extraction module is implemented based on the FeedForward networks (FFN) and a gating mechanism to process statistical data.
+The model can be trained using the file `train.py`.
 
-Multi-dimensional features are extracted separately from reaction SMILES and molecular structures. The pre-trained ChemBERTa model is available at [seyonec/ChemBERTa_zinc250k_v2_40k](https://huggingface.co/seyonec/ChemBERTa_zinc250k_v2_40k).
-
-The model can be trained using the file `train.py`, and then tested using the file `test.py`.
-
-
-### Ablation Study
-We define the single-modal models **BERT-EC** and **GIN-EC** (derived from the **BERTGIN-EC** method) in the file `ablation_model.py`.
-
-Both modal models can be trained in one go using the file `train_ablation.py`.
+### Model testing
+Run `test.py` using the new .pth and new .pth model weights:run_config.json, and extra_norm.json obtained from the `train.py` output.
 
 
 ```
