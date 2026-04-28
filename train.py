@@ -17,7 +17,7 @@ from sklearn.metrics import (
 )
 from scipy.stats import pearsonr, spearmanr
 
-from wrc_tf2_model import TransformerHybridSEFusionModel
+from model import TransformerHybridSEFusionModel
 
 
 # -----------------------
