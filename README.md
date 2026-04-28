@@ -8,7 +8,7 @@
 
 The overall framework of ```DLPromoter-SF``` is shown in the following figure.
 
-![DLPromoter-SF Model Architecture](https://github.com/wuwuwu12310/DLPromoter-SF/blob/main/Model_Framework.png)
+![DLPromoter-SF Model Architecture](https://github.com/wuwuwu12310/DLPromoter-SF/blob/main/Model_Architecture.png)
 
 
 ## Description
